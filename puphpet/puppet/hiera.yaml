@@ -1,0 +1,13 @@
+---
+version: 5
+defaults:
+  datadir: /opt/puphpet
+  data_hash: yaml_data
+
+hierarchy:
+  - name: YAML data
+    backend: yaml
+    paths:
+      - "config-%{::provisioner_type}.yaml"
+      - config-custom.yaml
+      - config.yaml
